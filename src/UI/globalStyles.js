@@ -1,9 +1,7 @@
-import { createGlobalStyle } from "styled-components";
-import { normalize } from "styled-normalize";
+import { createGlobalStyle } from 'styled-components';
+import 'modern-normalize';
 
 export const GlobalStyles = createGlobalStyle`
-  ${normalize}
-
   :root {
     --body-font-size: 16px;
     --body-font-weight: 300;
