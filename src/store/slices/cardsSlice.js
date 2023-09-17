@@ -1,5 +1,5 @@
 // store.js
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   cards: [],
@@ -7,14 +7,14 @@ const initialState = {
 };
 
 const cardSlice = createSlice({
-  name: "cards",
+  name: 'cards',
   initialState,
   reducers: {
     addCard: (state, action) => {
       state.cards.push(action.payload);
     },
     removeCard: (state, action) => {
-      state.cards = state.cards.filter((card) => card.id !== action.payload);
+      state.cards = state.cards.filter(card => card.id !== action.payload);
     },
     toggleFavorite: (state, action) => {
       const cardId = action.payload;
@@ -28,7 +28,7 @@ const cardSlice = createSlice({
   },
 });
 
-export const { addCard, removeCard, toggleFavorite } = cardSlice.actions;
+export const { toggleFavorite } = cardSlice.actions;
 
 const reducer = cardSlice.reducer;
 

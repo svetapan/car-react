@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { gethAdvertsFromMockAPI } from "../../store/gethAdvertsFromMockAPI";
-import { CardsGroup } from "./Catalog.styled";
+import React, { useEffect, useState } from 'react';
+import { gethAdvertsFromMockAPI } from '../../store/gethAdvertsFromMockAPI';
+import { CardsGroup } from './Catalog.styled';
 
-import { useSelector, useDispatch } from "react-redux";
-import { addCard, removeCard, toggleFavorite } from "../../store/store";
-import CardItem from "../CardItem/CardItem";
-import { ButtonLink } from "../Button/Button";
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleFavorite } from '../../store/store';
+import CardItem from '../CardItem/CardItem';
+import { ButtonLink } from '../Button/Button';
 
 const Catalog = () => {
   const [adverts, setAdverts] = useState([]);
   const [visibleCardCount, setVisibleCardCount] = useState(8);
 
-  const cards = useSelector((state) => state.cards.cards);
-  const favorites = useSelector((state) => state.cards.favorites);
+  const favorites = useSelector(state => state.cards.favorites);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -28,10 +27,10 @@ const Catalog = () => {
   }, []);
 
   function getCardById(id) {
-    return adverts.find((card) => card.id === id);
+    return adverts.find(card => card.id === id);
   }
 
-  const handleHeartClick = (id) => {
+  const handleHeartClick = id => {
     const index = favorites.indexOf(id);
 
     const favCard = getCardById(id);
@@ -52,7 +51,7 @@ const Catalog = () => {
   return (
     <section>
       <CardsGroup>
-        {adverts.slice(0, visibleCardCount).map((advert) => {
+        {adverts.slice(0, visibleCardCount).map(advert => {
           return (
             <CardItem
               key={advert.id}
