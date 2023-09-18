@@ -3,7 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { toggleFavorite } from '../../store/store';
 import CardItem from '../CardItem/CardItem';
 import { CardsGroup, FavoriteSection } from './Favorite.styled';
-import Sidebar from 'Sidebar/Sidebar';
+import Sidebar from 'components/Sidebar/Sidebar';
+import { FavoriteContainer } from './Favorite.styled';
 
 const Favorite = () => {
   const favorites = useSelector(state => state.cards.favorites);
@@ -24,17 +25,19 @@ const Favorite = () => {
 
   return (
     <FavoriteSection>
-      <Sidebar />
-      <CardsGroup>
-        {favorites.map(favorite => (
-          <CardItem
-            key={favorite.id}
-            advert={favorite}
-            favorites={favorites}
-            handleHeartClick={handleHeartClick}
-          />
-        ))}
-      </CardsGroup>
+      <FavoriteContainer>
+        <Sidebar />
+        <CardsGroup>
+          {favorites.map(favorite => (
+            <CardItem
+              key={favorite.id}
+              advert={favorite}
+              favorites={favorites}
+              handleHeartClick={handleHeartClick}
+            />
+          ))}
+        </CardsGroup>
+      </FavoriteContainer>
     </FavoriteSection>
   );
 };

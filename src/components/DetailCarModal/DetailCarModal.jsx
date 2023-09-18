@@ -53,8 +53,6 @@ const DetailCarModal = ({ advert }) => {
         <ListUl>
           <ListItem>Fuel Consumption:{fuelConsumption}</ListItem>
           <ListItem>Engine Size{engineSize}</ListItem>
-          {/* <ListItem>{model}</ListItem>
-          <ListItem>{functionalities[0]}</ListItem> */}
         </ListUl>
       </List>
       <Description>{description}</Description>
@@ -88,7 +86,9 @@ const DetailCarModal = ({ advert }) => {
           Prise: <MarkedText>{rentalPrice}</MarkedText>
         </RentalItem>
       </RentalList>
-      <Button>Rental car</Button>
+      <a href="tel:+380730000000">
+        <Button>Rental car</Button>
+      </a>
     </ModalContainer>
   );
 };

@@ -7,10 +7,7 @@ export const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-color: rgb(255 255 255 / 0.5); */
-  /* background-color: rgb(227 243 255 / 0.1); */
-  background-color: rgb(62 133 243 / 0.2);
-  backdrop-filter: blur(5px);
+  background-color: rgb(18 20 23 / 0.5);
   display: flex;
   justify-content: center;
   align-items: center;

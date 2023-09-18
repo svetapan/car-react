@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const Navigation = styled.nav`
+export const PageHeader = styled.nav`
   position: sticky;
   top: 0;
   z-index: 100;
@@ -12,6 +12,11 @@ export const Navigation = styled.nav`
   background-color: rgb(232 237 242 /1);
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
     0 1px 10px 0 rgba(0, 0, 0, 0.12);
+`;
+
+export const Navigation = styled.nav`
+  display: flex;
+  gap: 20px;
 `;
 
 export const StyledNavLink = styled(NavLink)`
@@ -26,9 +31,4 @@ export const StyledNavLink = styled(NavLink)`
     text-decoration: none;
     color: rgb(236, 53, 53);
   }
-`;
-
-export const Container = styled.div`
-  display: flex;
-  gap: 20px;
 `;

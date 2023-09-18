@@ -31,9 +31,4 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     list-style: none;
   }
-
-  section {
-    max-width: 1128px;
-    margin: 0 auto;
-  }
 `;

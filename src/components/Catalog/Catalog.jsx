@@ -1,30 +1,49 @@
 import React, { useEffect, useState } from 'react';
-import { gethAdvertsFromMockAPI } from '../../store/gethAdvertsFromMockAPI';
 import { BtnWrap, CardsGroup, CatalogSection } from './Catalog.styled';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleFavorite } from '../../store/store';
+import { setCards, toggleFavorite } from '../../store/store';
 import CardItem from '../CardItem/CardItem';
 import { ButtonLink } from '../Button/Button';
+import Filter from 'components/Filter/Filter';
+import { Container } from 'components/Container/Container';
 
 const Catalog = () => {
   const [adverts, setAdverts] = useState([]);
   const [visibleCardCount, setVisibleCardCount] = useState(8);
+  const [filteredAdverts, setFilteredAdverts] = useState(adverts);
 
   const favorites = useSelector(state => state.cards.favorites);
   const dispatch = useDispatch();
+  const filter = useSelector(state => state.filter);
 
   useEffect(() => {
-    async function fetchAdverts() {
-      try {
-        const res = await gethAdvertsFromMockAPI();
-        setAdverts(res);
-      } catch (error) {
-        console.error(error);
-      }
+    dispatch(setCards()).then(data => {
+      setAdverts(data.payload);
+    });
+  }, [dispatch]);
+
+  useEffect(() => {
+    const filterAdverts = () => {
+      return adverts.filter(advert => {
+        return (
+          (advert.make.toLowerCase() === filter.brand || !filter.brand) &&
+          (parseFloat(advert.rentalPrice.replace('$', '')) <= filter.price ||
+            !filter.price) &&
+          (parseFloat(advert.mileage) >= filter.mileageFrom ||
+            !filter.mileageFrom) &&
+          (parseFloat(advert.mileage) <= filter.mileageTo || !filter.mileageTo)
+        );
+      });
+    };
+
+    const filtered = filterAdverts();
+    setFilteredAdverts(filtered);
+
+    if (Object.values(filter).every(element => element === '')) {
+      setFilteredAdverts(adverts);
     }
-    fetchAdverts();
-  }, []);
+  }, [filter, adverts]);
 
   function getCardById(id) {
     return adverts.find(card => card.id === id);
@@ -49,10 +68,11 @@ const Catalog = () => {
   };
 
   return (
-    <section>
-      <CatalogSection>
+    <CatalogSection>
+      <Container>
+        <Filter />
         <CardsGroup>
-          {adverts.slice(0, visibleCardCount).map(advert => {
+          {filteredAdverts.slice(0, visibleCardCount).map(advert => {
             return (
               <CardItem
                 key={advert.id}
@@ -63,13 +83,14 @@ const Catalog = () => {
             );
           })}
         </CardsGroup>
-        {visibleCardCount <= adverts.length && (
+        {!filteredAdverts.length && <p>There is no data for your request</p>}
+        {visibleCardCount <= filteredAdverts.length && (
           <BtnWrap>
             <ButtonLink onClick={loadMoreCards}>Load more</ButtonLink>
           </BtnWrap>
         )}
-      </CatalogSection>
-    </section>
+      </Container>
+    </CatalogSection>
   );
 };
 

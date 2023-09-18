@@ -1,15 +1,15 @@
 import React from 'react';
-import { Container, Navigation, StyledNavLink } from './Header.styled';
+import { PageHeader, Navigation, StyledNavLink } from './Header.styled';
 
 const Header = () => {
   return (
-    <Navigation>
+    <PageHeader>
       <StyledNavLink to="/">Home</StyledNavLink>
-      <Container>
+      <Navigation>
         <StyledNavLink to="/catalog">Catalog</StyledNavLink>
         <StyledNavLink to="/favorites">Favorites</StyledNavLink>
-      </Container>
-    </Navigation>
+      </Navigation>
+    </PageHeader>
   );
 };
 

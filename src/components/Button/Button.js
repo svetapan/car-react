@@ -12,6 +12,7 @@ export const Button = styled.button`
   display: inline-block;
   min-width: 168px;
   transition: all 0.3s ease-out;
+  height: ${props => props.$height || 'auto'};
 
   &:hover,
   &:focus {

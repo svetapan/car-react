@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { StyledSidebar } from './Sidebar.styled';
 import { Button } from 'components/Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
-// import { resetCards } from '../../src/store/slices/cardsSlice';
-import { resetCards } from '../../src/store/store';
+import { resetCards } from '../../store/store';
 
 const Sidebar = () => {
   const dispatch = useDispatch();

@@ -1,9 +1,13 @@
 import styled from 'styled-components';
+import { Container } from 'components/Container/Container';
 
 export const FavoriteSection = styled.section`
+  padding: 25px 0;
+`;
+
+export const FavoriteContainer = styled(Container)`
   display: flex;
   gap: 29px;
-  padding: 25px 0;
 `;
 
 export const CardsGroup = styled.aside`
