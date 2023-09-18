@@ -1,36 +1,31 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleFavorite } from '../../store/store';
 import CardItem from '../CardItem/CardItem';
-import { CardsGroup } from '../CardItem/CardItem.styled';
-import { Sidebar } from './Favorite.styled';
+import { CardsGroup, FavoriteSection } from './Favorite.styled';
+import Sidebar from 'Sidebar/Sidebar';
 
 const Favorite = () => {
   const favorites = useSelector(state => state.cards.favorites);
   const dispatch = useDispatch();
-
-  useEffect(() => {}, []);
 
   function getCardById(id) {
     return favorites.find(favorite => favorite.id === id);
   }
 
   const handleHeartClick = id => {
-    const index = favorites.findIndex(favorite => favorite.id === id);
+    const index = favorites.indexOf(id);
+    const favCard = getCardById(id);
 
     if (index === -1) {
-      const favCard = getCardById(id);
       dispatch(toggleFavorite(favCard));
     }
   };
 
   return (
-    <section>
+    <FavoriteSection>
+      <Sidebar />
       <CardsGroup>
-        <Sidebar>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-          porro ut at! At est unde ullam libero, voluptatem laboriosam dolorum.
-        </Sidebar>
         {favorites.map(favorite => (
           <CardItem
             key={favorite.id}
@@ -40,7 +35,7 @@ const Favorite = () => {
           />
         ))}
       </CardsGroup>
-    </section>
+    </FavoriteSection>
   );
 };
 

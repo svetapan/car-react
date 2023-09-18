@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import {
   Card,
   CardImg,
@@ -11,10 +11,14 @@ import {
   MarkedText,
   StyledHeart,
   HeartButton,
-} from "./CardItem.styled";
-import { Button } from "../Button/Button";
+} from './CardItem.styled';
+import { Button } from '../Button/Button';
+import { Modal } from 'components/Modal/Modal';
+import DetailCarModal from 'components/DetailCarModal/DetailCarModal';
 
 const CardItem = ({ advert, favorites, handleHeartClick }) => {
+  const [showModal, setShowModal] = useState(false);
+
   const {
     id,
     year,
@@ -28,11 +32,15 @@ const CardItem = ({ advert, favorites, handleHeartClick }) => {
     rentalCompany,
   } = advert;
 
+  const isShowModal = () => {
+    setShowModal(s => !s);
+  };
+
   return (
     <Card key={id}>
       <HeartButton onClick={() => handleHeartClick(id)}>
         <StyledHeart
-          $isFavorite={favorites.some((favorite) => favorite.id === id)}
+          $isFavorite={favorites.some(favorite => favorite.id === id)}
         />
       </HeartButton>
       <CardImg src={img} alt={model} />
@@ -43,8 +51,8 @@ const CardItem = ({ advert, favorites, handleHeartClick }) => {
         </CardTitle>
         <List>
           <ListUl>
-            <ListItem>{address.split(" ")[4]}</ListItem>
-            <ListItem>{address.split(",")[1]}</ListItem>
+            <ListItem>{address.split(' ')[4]}</ListItem>
+            <ListItem>{address.split(',')[1]}</ListItem>
             <ListItem>{rentalCompany}</ListItem>
             <ListItem>{type}</ListItem>
             <ListItem>{model}</ListItem>
@@ -53,7 +61,12 @@ const CardItem = ({ advert, favorites, handleHeartClick }) => {
           </ListUl>
         </List>
       </CardDescription>
-      <Button>Lern More</Button>
+      <Button onClick={isShowModal}>Lern More</Button>
+      {showModal && (
+        <Modal onActive={isShowModal}>
+          <DetailCarModal advert={advert} favorites={favorites} />
+        </Modal>
+      )}
     </Card>
   );
 };

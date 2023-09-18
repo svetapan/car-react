@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { gethAdvertsFromMockAPI } from '../../store/gethAdvertsFromMockAPI';
-import { CardsGroup } from './Catalog.styled';
+import { BtnWrap, CardsGroup, CatalogSection } from './Catalog.styled';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleFavorite } from '../../store/store';
@@ -50,21 +50,25 @@ const Catalog = () => {
 
   return (
     <section>
-      <CardsGroup>
-        {adverts.slice(0, visibleCardCount).map(advert => {
-          return (
-            <CardItem
-              key={advert.id}
-              advert={advert}
-              favorites={favorites}
-              handleHeartClick={handleHeartClick}
-            />
-          );
-        })}
-      </CardsGroup>
-      {visibleCardCount <= adverts.length && (
-        <ButtonLink onClick={loadMoreCards}>Load more</ButtonLink>
-      )}
+      <CatalogSection>
+        <CardsGroup>
+          {adverts.slice(0, visibleCardCount).map(advert => {
+            return (
+              <CardItem
+                key={advert.id}
+                advert={advert}
+                favorites={favorites}
+                handleHeartClick={handleHeartClick}
+              />
+            );
+          })}
+        </CardsGroup>
+        {visibleCardCount <= adverts.length && (
+          <BtnWrap>
+            <ButtonLink onClick={loadMoreCards}>Load more</ButtonLink>
+          </BtnWrap>
+        )}
+      </CatalogSection>
     </section>
   );
 };

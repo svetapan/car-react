@@ -1,4 +1,3 @@
-// store.js
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -16,6 +15,9 @@ const cardSlice = createSlice({
     removeCard: (state, action) => {
       state.cards = state.cards.filter(card => card.id !== action.payload);
     },
+    resetCards: state => {
+      state.cards = [];
+    },
     toggleFavorite: (state, action) => {
       const cardId = action.payload;
       const index = state.favorites.indexOf(cardId);
@@ -28,7 +30,8 @@ const cardSlice = createSlice({
   },
 });
 
-export const { toggleFavorite } = cardSlice.actions;
+export const { toggleFavorite, resetCards, removeCard, addCard } =
+  cardSlice.actions;
 
 const reducer = cardSlice.reducer;
 

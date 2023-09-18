@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Button = styled.button`
   background-color: #3470ff;
@@ -9,19 +9,28 @@ export const Button = styled.button`
   font-size: 14px;
   font-weight: 600;
   padding: 12px;
-  width: 100%;
+  display: inline-block;
+  min-width: 168px;
+  transition: all 0.3s ease-out;
+
+  &:hover,
+  &:focus {
+    background-color: #0b44cd;
+  }
 `;
 
 export const ButtonLink = styled.button`
-  display: block;
+  display: inline-block;
   background-color: transparent;
   border: none;
   color: #3470ff;
   text-decoration: underline;
-  margin: 71px auto 0;
   cursor: pointer;
+  transition: all 0.3s ease-out;
 
-  &:hover {
+  &:hover,
+  &:focus {
+    color: #0b44cd;
     text-decoration: none;
   }
 `;

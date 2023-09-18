@@ -23,10 +23,14 @@ const cardSlice = createSlice({
 
       localStorage.setItem('favorites', JSON.stringify(state.favorites));
     },
+    resetCards: (state, action) => {
+      state.favorites = [];
+      localStorage.removeItem('favorites');
+    },
   },
 });
 
-export const { toggleFavorite } = cardSlice.actions;
+export const { toggleFavorite, resetCards } = cardSlice.actions;
 
 const reducer = cardSlice.reducer;
 

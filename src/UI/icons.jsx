@@ -16,3 +16,51 @@ export const Heart = ({ ...props }) => {
     </svg>
   );
 };
+
+// export const CloseIcon = ({ ...props }) => {
+//   return (
+//     <svg
+//       width="24"
+//       height="24"
+//       viewBox="0 0 24 24"
+//       // fill="none"
+//       xmlns="http://www.w3.org/2000/svg"
+//       {...props}
+//     >
+//       <path
+//         d="M18 6L6 18"
+//         // stroke="#121417"
+//         stroke-width="1.8"
+//         stroke-linecap="round"
+//         stroke-linejoin="round"
+//       />
+//       <path
+//         d="M6 6L18 18"
+//         stroke="#121417"
+//         stroke-width="1.8"
+//         stroke-linecap="round"
+//         stroke-linejoin="round"
+//       />
+//     </svg>
+//   );
+// };
+
+export const CloseIcon = ({ size = 24, ...props }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 32 32"
+      {...props}
+    >
+      <path
+        strokeLinejoin="round"
+        strokeLinecap="round"
+        strokeMiterlimit="4"
+        strokeWidth="2.3529"
+        d="M24 8l-16 16M8 8l16 16"
+      ></path>
+    </svg>
+  );
+};

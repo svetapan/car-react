@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
-import styled from "styled-components";
+import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
 
 export const Navigation = styled.nav`
   position: sticky;
@@ -15,12 +15,15 @@ export const Navigation = styled.nav`
 `;
 
 export const StyledNavLink = styled(NavLink)`
-  text-decoration: none;
+  text-decoration: underline;
   transition: all 300ms ease-out;
 
   &:hover,
   &:focus {
-    text-decoration: underline;
+    color: rgb(236, 53, 53);
+  }
+  &.active {
+    text-decoration: none;
     color: rgb(236, 53, 53);
   }
 `;

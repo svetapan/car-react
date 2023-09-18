@@ -1,11 +1,6 @@
-import { Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout/Layout";
-import {
-  HomePage,
-  CatalogPage,
-  FavoritesPage,
-  NotFoundPage,
-} from "./components/pages";
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout/Layout';
+import { HomePage, CatalogPage, FavoritesPage } from './pages';
 
 const App = () => {
   return (
@@ -15,7 +10,7 @@ const App = () => {
           <Route index element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
-          <Route path="*" element={<NotFoundPage />} />
+          <Route path="*" element={<HomePage />} />
         </Route>
       </Routes>
     </>
