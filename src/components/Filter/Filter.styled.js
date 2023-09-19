@@ -29,7 +29,6 @@ export const Select = styled.select`
   font-size: 18px;
   line-height: 1.12;
   font-weight: 500;
-  /* align-items: center; */
   background-color: var(--input-bg-color);
   outline: none;
   height: 48px;

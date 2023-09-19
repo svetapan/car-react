@@ -67,7 +67,7 @@ const Home = () => {
               spaceBetween={10}
               breakpoints={{
                 1440: {
-                  slidesPerView: 2,
+                  slidesPerView: 5,
                   spaceBetween: 20,
                 },
               }}

@@ -37,6 +37,7 @@ const Favorite = () => {
               advert={favorite}
               favorites={favorites}
               handleHeartClick={handleHeartClick}
+              moreInfo={true}
             />
           ))}
         </CardsGroup>
