@@ -9,7 +9,7 @@ export const PageHeader = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 20px 30px;
-  background-color: rgb(232 237 242 /1);
+  background-color: var(--header-bg-color);
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
     0 1px 10px 0 rgba(0, 0, 0, 0.12);
 `;
@@ -25,10 +25,10 @@ export const StyledNavLink = styled(NavLink)`
 
   &:hover,
   &:focus {
-    color: rgb(236, 53, 53);
+    color: var(--link-accent);
   }
   &.active {
     text-decoration: none;
-    color: rgb(236, 53, 53);
+    color: var(--link-accent);
   }
 `;

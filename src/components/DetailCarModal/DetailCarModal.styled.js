@@ -4,7 +4,7 @@ export const ModalContainer = styled.div`
   max-width: 541px;
   padding: 40px;
   border-radius: 24px;
-  background-color: #fff;
+  background-color: var(--modal-bg);
 `;
 
 export const CardImg = styled.img`
@@ -14,26 +14,24 @@ export const CardImg = styled.img`
   border-radius: 14px;
   object-fit: cover;
   margin-bottom: 14px;
-  background: #3470ff;
+  background: var(--img-bg);
 `;
 
 export const CardTitle = styled.h3`
   display: flex;
   flex-wrap: wrap;
-  font-weight: 500;
   font-size: 18px;
-  line-height: 1.5;
-  color: #121417;
   margin: 0 0 8px;
   gap: 4px;
 `;
 
 export const MarkedText = styled.span`
-  color: #3470ff;
+  color: var(--marked-color);
 `;
 
 export const List = styled.div`
   overflow: hidden;
+  margin-bottom: 14px;
 `;
 
 export const ListUl = styled.ul`
@@ -42,15 +40,11 @@ export const ListUl = styled.ul`
   align-items: center;
   margin-left: -7px;
   font-size: 12px;
-  color: rgba(18 20 23 / 0.5);
-`;
-
-export const Element = styled.span`
-  color: #121417;
+  color: var(--descr-color);
 `;
 
 export const ListItem = styled.li`
-  border-left: solid 1px rgba(18 20 23 / 0.1);
+  border-left: solid 1px var(--grey-border);
   padding: 0 6px;
   margin-bottom: 4px;
 
@@ -62,23 +56,30 @@ export const ListItem = styled.li`
 
 export const Description = styled.p`
   font-size: 14px;
+  line-height: calc(20 / 14);
+  margin-bottom: 24px;
 `;
 
 export const Title = styled.h4`
   font-size: 14px;
-  font-weight: medium;
+  line-height: calc(20 / 14);
+  margin-bottom: 8px;
 `;
 
 export const StyledTitle = styled.h4`
   font-size: 14px;
+  line-height: calc(20 / 14);
+  margin-top: 24px;
 `;
+
 export const RentalList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  color: #363535;
+  color: var(--light-black);
   gap: 8px;
   margin-bottom: 34px;
+  margin-top: 8px;
 `;
 export const RentalItem = styled.li`
   padding: 7px 14px;

@@ -16,7 +16,7 @@ import { Button } from '../Button/Button';
 import { Modal } from 'components/Modal/Modal';
 import DetailCarModal from 'components/DetailCarModal/DetailCarModal';
 
-const CardItem = ({ advert, favorites, handleHeartClick }) => {
+const CardItem = ({ advert, favorites, handleHeartClick, moreInfo }) => {
   const [showModal, setShowModal] = useState(false);
 
   const {
@@ -44,24 +44,26 @@ const CardItem = ({ advert, favorites, handleHeartClick }) => {
         />
       </HeartButton>
       <CardImg src={img} alt={model} />
-      <CardDescription>
-        <CardPrice>{rentalPrice}</CardPrice>
-        <CardTitle>
-          {make} <MarkedText>{model},</MarkedText> {year}
-        </CardTitle>
-        <List>
-          <ListUl>
-            <ListItem>{address.split(' ')[4]}</ListItem>
-            <ListItem>{address.split(',')[1]}</ListItem>
-            <ListItem>{rentalCompany}</ListItem>
-            <ListItem>{type}</ListItem>
-            <ListItem>{model}</ListItem>
-            <ListItem>{id}</ListItem>
-            <ListItem>{functionalities[0]}</ListItem>
-          </ListUl>
-        </List>
-      </CardDescription>
-      <Button onClick={isShowModal}>Lern More</Button>
+      {moreInfo && (
+        <CardDescription>
+          <CardPrice>{rentalPrice}</CardPrice>
+          <CardTitle>
+            {make} <MarkedText>{model},</MarkedText> {year}
+          </CardTitle>
+          <List>
+            <ListUl>
+              <ListItem>{address.split(' ')[4]}</ListItem>
+              <ListItem>{address.split(',')[1]}</ListItem>
+              <ListItem>{rentalCompany}</ListItem>
+              <ListItem>{type}</ListItem>
+              <ListItem>{model}</ListItem>
+              <ListItem>{id}</ListItem>
+              <ListItem>{functionalities[0]}</ListItem>
+            </ListUl>
+          </List>
+        </CardDescription>
+      )}
+      {moreInfo && <Button onClick={isShowModal}>Lern More</Button>}
       {showModal && (
         <Modal onActive={isShowModal}>
           <DetailCarModal advert={advert} favorites={favorites} />

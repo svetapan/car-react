@@ -4,23 +4,30 @@ import { Hero, Intro, Title, IntroText } from './Home.styled';
 import carBlue from '../../UI/images/carBlue.jpg';
 import { Container } from 'components/Container/Container';
 import CardItem from 'components/CardItem/CardItem';
-import { CatalogSection, CardsGroup } from 'components/Catalog/Catalog.styled';
+import { CatalogSection } from 'components/Catalog/Catalog.styled';
 import { setCards, toggleFavorite } from '../../store/store';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const Home = () => {
   const [adverts, setAdverts] = useState([]);
+
   const dispatch = useDispatch();
   const favorites = useSelector(state => state.cards.favorites);
 
   useEffect(() => {
     dispatch(setCards()).then(data => {
-      setAdverts(data.payload.slice(0, 4));
+      setAdverts(data.payload.slice(0, 36));
     });
   }, [dispatch]);
 
   function getCardById(id) {
     return adverts.find(card => card.id === id);
   }
+
   const handleHeartClick = id => {
     const index = favorites.indexOf(id);
 
@@ -54,18 +61,50 @@ const Home = () => {
       </Intro>
       <CatalogSection>
         <Container>
-          <CardsGroup>
-            {adverts.map(advert => {
-              return (
-                <CardItem
-                  key={advert.id}
-                  advert={advert}
-                  favorites={favorites}
-                  handleHeartClick={handleHeartClick}
-                />
-              );
-            })}
-          </CardsGroup>
+          {adverts.length && (
+            <Swiper
+              slidesPerView={5}
+              spaceBetween={10}
+              breakpoints={{
+                1440: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+              }}
+              modules={[Navigation, Autoplay]}
+              navigation={{
+                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next',
+              }}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              className="mySwiper"
+            >
+              {adverts.map(advert => {
+                const { id } = advert;
+                return (
+                  <SwiperSlide
+                    key={id}
+                    style={{
+                      height: 'auto',
+                      display: 'flex',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <CardItem
+                      key={advert.id}
+                      advert={advert}
+                      favorites={favorites}
+                      handleHeartClick={handleHeartClick}
+                      moreInfo={false}
+                    />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          )}
         </Container>
       </CatalogSection>
     </>

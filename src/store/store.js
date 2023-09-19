@@ -1,4 +1,3 @@
-// store.js
 import {
   configureStore,
   createAsyncThunk,

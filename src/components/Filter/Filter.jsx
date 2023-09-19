@@ -88,6 +88,13 @@ const Filter = () => {
           <option value="130">130</option>
           <option value="140">140</option>
           <option value="150">150</option>
+          <option value="150">200</option>
+          <option value="150">250</option>
+          <option value="150">300</option>
+          <option value="150">350</option>
+          <option value="150">400</option>
+          <option value="150">450</option>
+          <option value="150">500</option>
         </Select>
       </FormGroup>
       <FormGroup $width="320px">

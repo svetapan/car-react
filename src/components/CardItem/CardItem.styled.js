@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Heart } from "../../UI/icons";
+import styled from 'styled-components';
+import { Heart } from '../../UI/icons';
 
 export const CardsGroup = styled.div`
   display: grid;
@@ -21,28 +21,23 @@ export const CardImg = styled.img`
   border-radius: 14px;
   object-fit: cover;
   margin-bottom: 14px;
-  background: #000;
+  background: var(--accent-color);
 `;
 
 export const CardTitle = styled.h3`
   display: flex;
   flex-wrap: wrap;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #121417;
+  color: var(--text-color);
   margin: 0 0 8px;
   gap: 4px;
+  font-size: 16px;
 `;
 
 export const MarkedText = styled.span`
-  color: #3470ff;
+  color: var(--marked-color);
 `;
 
 export const CardPrice = styled.span`
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 500;
   float: right;
 `;
 export const CardDescription = styled.div`
@@ -60,15 +55,11 @@ export const ListUl = styled.ul`
   align-items: center;
   margin-left: -7px;
   font-size: 12px;
-  color: rgba(18 20 23 / 0.5);
-`;
-
-export const Element = styled.span`
-  color: #121417;
+  color: var(--grey-text);
 `;
 
 export const ListItem = styled.li`
-  border-left: solid 1px rgba(18 20 23 / 0.1);
+  border-left: solid 1px var(--grey-border);
   padding: 0 6px;
   margin-bottom: 4px;
 
@@ -81,13 +72,16 @@ export const ListItem = styled.li`
 export const StyledHeart = styled(Heart)`
   fill: transparent;
   transition: all 0.3s ease;
-  stroke: #fff;
-  fill: ${(props) => (props.$isFavorite ? "#3470ff" : "transparent")};
-  stroke: ${(props) => (props.$isFavorite ? "#3470ff" : "#fff")};
+  stroke: var(--white);
+  fill: ${props => (props.$isFavorite ? 'var(--heart-color)' : 'transparent')};
+  stroke: ${props =>
+    props.$isFavorite ? 'var(--heart-color)' : 'var( --heart-border)'};
 
   &:hover {
-    fill: #3470ff;
-    stroke: #3470ff;
+    fill: ${props =>
+      props.$isFavorite ? 'transparent' : 'var(--heart-color)'};
+    stroke: ${props =>
+      props.$isFavorite ? 'var( --heart-border)' : 'var(--heart-color)'};
   }
 `;
 

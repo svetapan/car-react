@@ -14,9 +14,10 @@ export const FormGroup = styled.div`
 
 export const Label = styled.label`
   display: block;
-  color: #8a8a89;
+  color: var(--label-color);
   font-size: 14px;
   font-weight: 500;
+  line-height: calc(18 / 14);
 `;
 
 export const Select = styled.select`
@@ -24,11 +25,12 @@ export const Select = styled.select`
   width: 100%;
   border-radius: 14px;
   border: none;
-  padding: 14px 18px;
+  padding: 4px 18px 6px;
   font-size: 18px;
   line-height: 1.12;
   font-weight: 500;
-  background-color: #f7f7fb;
+  /* align-items: center; */
+  background-color: var(--input-bg-color);
   outline: none;
   height: 48px;
 `;
@@ -40,14 +42,13 @@ export const Input = styled.input.attrs({ type: 'tel' })`
   border: none;
   padding: 14px 18px;
   font-size: 18px;
-  line-height: 1.12;
-  font-weight: 500;
-  background-color: #f7f7fb;
+  line-height: calc(20 / 18);
+  background-color: var(--input-bg-color);
   outline: none;
   height: 48px;
 
   + input {
-    border-left: 1px solid rgba(138 138 137/ 0.2);
+    border-left: 1px solid var(--border-gray);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
@@ -55,6 +56,6 @@ export const Input = styled.input.attrs({ type: 'tel' })`
 
 export const MiliageContainer = styled.div`
   display: flex;
-  background-color: #f7f7fb;
+  background-color: var(--input-bg-color);
   border-radius: 14px;
 `;

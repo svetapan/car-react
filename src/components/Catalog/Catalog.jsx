@@ -79,11 +79,18 @@ const Catalog = () => {
                 advert={advert}
                 favorites={favorites}
                 handleHeartClick={handleHeartClick}
+                moreInfo={true}
               />
             );
           })}
         </CardsGroup>
-        {!filteredAdverts.length && <p>There is no data for your request</p>}
+        {!filteredAdverts.length && (
+          <p
+            style={{ fontSize: '40px', textAlign: 'center', color: '#ec3535' }}
+          >
+            There is no data for your request
+          </p>
+        )}
         {visibleCardCount <= filteredAdverts.length && (
           <BtnWrap>
             <ButtonLink onClick={loadMoreCards}>Load more</ButtonLink>

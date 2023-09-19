@@ -27,6 +27,9 @@ const Favorite = () => {
     <FavoriteSection>
       <FavoriteContainer>
         <Sidebar />
+        {!favorites.length && (
+          <p style={{ fontSize: '32px' }}>Please choose car in Catalog</p>
+        )}
         <CardsGroup>
           {favorites.map(favorite => (
             <CardItem
