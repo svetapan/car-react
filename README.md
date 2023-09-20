@@ -57,7 +57,7 @@ from the list by clicking the Delete all button in the sidebar.</p>
 ## Link to the app
 
 &emsp;To use the application, please follow the link
-[Car-react](svetapan.github.io/car-react/)
+[Car-react](https://svetapan.github.io/car-react/).
 
 <div align="center"><b>Thank you very much for choosing our application!</b>
 </br></br><div>
