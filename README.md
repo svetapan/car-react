@@ -9,57 +9,61 @@ brands and models.</p>
 
 ## Main functionalities and possibilities
 
-<p>On the Home page you can see a slider with models of machines offered by our
+<p>&emsp;On the Home page you can see a slider with models of machines offered by our
 company. If you immediately like the car, you can click on the heart icon at the
 top right of the picture and this model will automatically be added to the
 Favorites page.</p>
 
 ![Slider](./assets/slider.png)
 
-Navigating through the pages of the app: On the main screen at the top, you can
+<p>&emsp;Navigating through the pages of the app: On the main screen at the top, you can
 link to the Catalog page or Favorite page, where you can browse available cars
-for rent.
+for rent.</p>
 
 ![Navigation](./assets/navigation.png)
 
-Search and filtering: RentalCar provides many parameters for searching for cars,
+<p>&emsp;Search and filtering: RentalCar provides many parameters for searching for cars,
 such as brand, rental price, car mileage from and to. You can easily adjust the
-filters to find a car that meets your needs.
+filters to find a car that meets your needs.</p>
 
 ![Filtering and search car](./assets/filters.png)
 
-Detailed information: for a more detail description of the selected car, you can
+<p>&emsp;Detailed information: for a more detail description of the selected car, you can
 click the Learn more button. A modal window will open with detail information
 about the selected model.You can also add a model to the list of favorites by
 clicking on the heart at the top or remove it from the list of favorites by
-clicking on the heart again.
+clicking on the heart again.</p>
 
 ![Detail information](./assets/button-learn-more.png)
 
-Modal window: you can read detailed information about the car and if everything
+<p>&emsp;Modal window: you can read detailed information about the car and if everything
 suits you, click the Rental car button, which will automatically connect you
-with the company by phone.
+with the company by phone.</p>
 
 ![Detail modal](./assets/detail-modal.png)
 
-View even more adverts you can by clicking the Load more button at the bottom of
-the Home page.
+<p>&emsp;View even more adverts you can by clicking the Load more button at the bottom of
+the Home page.</p>
 
 ![Detail modal](./assets/load-more.png)
 
-On Favorite page you can view the selected car and see detail information about
+<p>&emsp;On Favorite page you can view the selected car and see detail information about
 the car by clicking the Learn more button. You can remove car from the list of
 favorites by clicking on the heart at the top right. You can delete all cars
-from the list by clicking the Delete all button in the sidebar.
+from the list by clicking the Delete all button in the sidebar.</p>
 
 ![Favorite Page](./assets/favorite-page.png)
 
 ## Link to the app
 
+<p>&emsp;To use the application, please follow the link</p>
 [Car-react](svetapan.github.io/car-react/)
 
 <div align="center">
-<b>Технології та інструменти що були використані при розробці:</b></br>
+<b>Технології та інструменти що були використані при розробці:</b>
+
+<div align="center"><b>Thank you very much for choosing our application!</b>
+</br></br><div>
   
 ![Mockapi.io](https://img.shields.io/badge/-Mockapi.io-%23Clojure?style=for-the-badge&logo=Mockapi.io&logoColor=white)
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
