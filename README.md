@@ -36,7 +36,7 @@ clicking on the heart again.</p>
 
 ![Detail information](./assets/button-learn-more.png)
 
-<p>&emsp;Modal window: you can read detailed information about the car and if everything
+<p>&emsp;Modal window: you can read detail information about the car and if everything
 suits you, click the Rental car button, which will automatically connect you
 with the company by phone.</p>
 
