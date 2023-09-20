@@ -28,8 +28,7 @@ export const StyledNavLink = styled(NavLink)`
     color: var(--link-accent);
   }
 
-  &.active,
-  &:first-child {
+  &.active {
     text-decoration: none;
     color: var(--link-accent);
   }
