@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/car-react/static/css/main.f23cba04.css",
-    "main.js": "/car-react/static/js/main.3dbe6422.js",
+    "main.js": "/car-react/static/js/main.2b6c3d29.js",
     "static/media/carBlue.jpg": "/car-react/static/media/carBlue.8abed78352684b4313bd.jpg",
     "index.html": "/car-react/index.html",
     "main.f23cba04.css.map": "/car-react/static/css/main.f23cba04.css.map",
-    "main.3dbe6422.js.map": "/car-react/static/js/main.3dbe6422.js.map"
+    "main.2b6c3d29.js.map": "/car-react/static/js/main.2b6c3d29.js.map"
   },
   "entrypoints": [
     "static/css/main.f23cba04.css",
-    "static/js/main.3dbe6422.js"
+    "static/js/main.2b6c3d29.js"
   ]
 }
