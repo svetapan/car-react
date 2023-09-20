@@ -71,19 +71,22 @@ const Catalog = () => {
     <CatalogSection>
       <Container>
         <Filter />
-        <CardsGroup>
-          {filteredAdverts.slice(0, visibleCardCount).map(advert => {
-            return (
-              <CardItem
-                key={advert.id}
-                advert={advert}
-                favorites={favorites}
-                handleHeartClick={handleHeartClick}
-                moreInfo={true}
-              />
-            );
-          })}
-        </CardsGroup>
+        {/* {!visibleCardCount && <p>Loading</p>} */}
+        {adverts && <p>Loading</p> && (
+          <CardsGroup>
+            {filteredAdverts.slice(0, visibleCardCount).map(advert => {
+              return (
+                <CardItem
+                  key={advert.id}
+                  advert={advert}
+                  favorites={favorites}
+                  handleHeartClick={handleHeartClick}
+                  moreInfo={true}
+                />
+              );
+            })}
+          </CardsGroup>
+        )}
         {!filteredAdverts.length && (
           <p
             style={{ fontSize: '40px', textAlign: 'center', color: '#ec3535' }}

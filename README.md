@@ -1,11 +1,18 @@
-# React homework template
+# Easy RentalCAR
 
-Этот проект был создан при помощи
+![Illustration Easy RentalCAR](./easy-rental-car.png)<br/>
+
+<!-- Этот проект был создан при помощи
 [Create React App](https://github.com/facebook/create-react-app). Для знакомства
 и настройки дополнительных возможностей
-[обратись к документации](https://facebook.github.io/create-react-app/docs/getting-started).
+[обратись к документации](https://facebook.github.io/create-react-app/docs/getting-started). -->
 
-## Создание репозитория по шаблону
+Easy RentalCAR - this is a convenient application designed for those who search
+and compare car rental offers. Our application facilitates the process of
+choosing and booking a car by providing a wide selection of cars of various
+brands and models.
+
+## Main functions and possibilities
 
 Используй этот репозиторий организации GoIT как шаблон для создания репозитория
 своего проекта. Для этого нажми на кнопку `«Use this template»` и выбери опцию

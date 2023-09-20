@@ -45,7 +45,7 @@ const Home = () => {
       <Hero style={{ backgroundImage: ` url(${carBlue})` }}>
         <Container>
           <Title $size={'56px'}>
-            <i>Easy Reantal Car</i>
+            <i>Easy ReantalCAR</i>
           </Title>
         </Container>
       </Hero>
@@ -53,9 +53,10 @@ const Home = () => {
         <Container>
           <Title>Welcome to RentalCAR</Title>
           <IntroText>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis quo adipisci dignissimos odio, voluptas consectetur
-            asperiores eum deleniti nemo nesciunt?
+            This is a convenient application designed for those who search and
+            compare car rental offers. Our application facilitates the process
+            of choosing and booking a car by providing a wide selection of cars
+            of various brands and models.
           </IntroText>
         </Container>
       </Intro>
