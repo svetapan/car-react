@@ -4,7 +4,9 @@ import { PageHeader, Navigation, StyledNavLink } from './Header.styled';
 const Header = () => {
   return (
     <PageHeader>
-      <StyledNavLink to="/">Home</StyledNavLink>
+      <StyledNavLink exact to="/">
+        Home
+      </StyledNavLink>
       <Navigation>
         <StyledNavLink to="/catalog">Catalog</StyledNavLink>
         <StyledNavLink to="/favorites">Favorites</StyledNavLink>
