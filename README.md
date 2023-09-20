@@ -2,17 +2,23 @@
 
 ![Illustration Easy RentalCAR](./assets/easy-rental-car.png)<br/>
 
-<p style={{textIndent: "20px"}}>Easy RentalCAR - this is a convenient application designed for those who search
+<style>
+  p {
+    text-indent: 20px;
+  }
+</style>
+
+<p>Easy RentalCAR - this is a convenient application designed for those who search
 and compare car rental offers. Our application facilitates the process of
 choosing and booking a car by providing a wide selection of cars of various
 brands and models.</p>
 
-## Main functions and possibilities
+## Main functionalities and possibilities
 
-On the Home page you can see a slider with models of machines offered by our
+<p>On the Home page you can see a slider with models of machines offered by our
 company. If you immediately like the car, you can click on the heart icon at the
 top right of the picture and this model will automatically be added to the
-Favorites page.
+Favorites page.</p>
 
 ![Slider](./assets/slider.png)
 
@@ -61,7 +67,6 @@ from the list by clicking the Delete all button in the sidebar.
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![Redux](https://img.shields.io/badge/@reduxjs/toolkit-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
