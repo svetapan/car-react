@@ -46,6 +46,11 @@ export const Input = styled.input.attrs({ type: 'tel' })`
   outline: none;
   height: 48px;
 
+  &::placeholder {
+    color: var(--placeholder-color);
+    font-weight: 500;
+  }
+
   + input {
     border-left: 1px solid var(--border-gray);
     border-top-left-radius: 0;

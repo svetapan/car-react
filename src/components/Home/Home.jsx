@@ -51,7 +51,7 @@ const Home = () => {
       </Hero>
       <Intro>
         <Container>
-          <Title>Welcome to RentalCAR</Title>
+          <Title>Welcome to the RentalCAR</Title>
           <IntroText>
             This is a convenient application designed for those who search and
             compare car rental offers. Our application facilitates the process

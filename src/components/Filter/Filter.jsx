@@ -104,11 +104,13 @@ const Filter = () => {
             name="mileageFrom"
             value={filterData.mileageFrom || ''}
             onChange={handleChange}
+            placeholder="From"
           ></Input>
           <Input
             name="mileageTo"
             value={filterData.mileageTo || ''}
             onChange={handleChange}
+            placeholder="To"
           ></Input>
         </MiliageContainer>
       </FormGroup>

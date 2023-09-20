@@ -37,7 +37,8 @@ export const GlobalStyles = createGlobalStyle`
     --img-bg: var(--dark-blue);
     --header-bg-color: var(--fair-gray);
     --sidebar-bg-color: var(--fair-gray);
-    --link-accent: var(--red)
+    --link-accent: var(--red);
+    --placeholder-color: var(--black);
   }
 
   ::before,*::after {

@@ -2,7 +2,7 @@
 
 ![Illustration Easy RentalCAR](./assets/easy-rental-car.png)<br/>
 
-<p textIndent="20px">Easy RentalCAR - this is a convenient application designed for those who search
+<p style={{textIndent: "20px"}}>Easy RentalCAR - this is a convenient application designed for those who search
 and compare car rental offers. Our application facilitates the process of
 choosing and booking a car by providing a wide selection of cars of various
 brands and models.</p>
@@ -22,13 +22,13 @@ for rent.
 
 ![Navigation](./assets/navigation.png)
 
-Search and filtering: RentalCar pr ovides many parameters for searching for
-cars, such as brand, rental price, car mileage from and to. You can easily
-adjust the filters to find a car that meets your needs.
+Search and filtering: RentalCar provides many parameters for searching for cars,
+such as brand, rental price, car mileage from and to. You can easily adjust the
+filters to find a car that meets your needs.
 
 ![Filtering and search car](./assets/filters.png)
 
-Detailed information: for a more detail description of the selected сфк, you can
+Detailed information: for a more detail description of the selected car, you can
 click the Learn more button. A modal window will open with detail information
 about the selected model.You can also add a model to the list of favorites by
 clicking on the heart at the top or remove it from the list of favorites by
