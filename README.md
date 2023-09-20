@@ -56,14 +56,14 @@ from the list by clicking the Delete all button in the sidebar.</p>
 
 ## Link to the app
 
-<p>&emsp;To use the application, please follow the link</p>
+&emsp;To use the application, please follow the link
 [Car-react](svetapan.github.io/car-react/)
-
-<div align="center">
-<b>Технології та інструменти що були використані при розробці:</b>
 
 <div align="center"><b>Thank you very much for choosing our application!</b>
 </br></br><div>
+
+<div align="center">
+<b>Technologies and tools used in development:</b>
   
 ![Mockapi.io](https://img.shields.io/badge/-Mockapi.io-%23Clojure?style=for-the-badge&logo=Mockapi.io&logoColor=white)
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
