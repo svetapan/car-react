@@ -33,6 +33,7 @@ const cardSlice = createSlice({
       const index = state.favorites.findIndex(
         favorite => favorite.id === cardId
       );
+
       if (index === -1) {
         state.favorites.push(action.payload);
       } else {

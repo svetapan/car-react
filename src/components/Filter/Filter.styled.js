@@ -30,6 +30,7 @@ export const Select = styled.select`
   line-height: 1.12;
   font-weight: 500;
   background-color: var(--input-bg-color);
+  color: var(--placeholder-selected-color);
   outline: none;
   height: 48px;
 `;
@@ -47,7 +48,7 @@ export const Input = styled.input.attrs({ type: 'tel' })`
   height: 48px;
 
   &::placeholder {
-    color: var(--placeholder-color);
+    color: var(--placeholder-selected-color);
     font-weight: 500;
   }
 

@@ -1,13 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const initialState = {
+  brand: '',
+  price: '',
+  mileageFrom: '',
+  mileageTo: '',
+};
+
 const filterSlice = createSlice({
   name: 'filter',
-  initialState: {
-    brand: '',
-    price: '',
-    mileageFrom: '',
-    mileageTo: '',
-  },
+  initialState,
   reducers: {
     setFilter: (state, action) => {
       return { ...state, ...action.payload };

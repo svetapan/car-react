@@ -7,7 +7,6 @@ export const GlobalStyles = createGlobalStyle`
     --body-font-weight: 500;
     --body-line-height: 1.5;
     --body-font-family: "Manrope", "Arial", sans-serif;
-    /* --heading-font-family: "Quicksand", sans-serif; */
     --gap: 1.5rem;
 
     --grey:  #8a8a89;
@@ -38,7 +37,8 @@ export const GlobalStyles = createGlobalStyle`
     --header-bg-color: var(--fair-gray);
     --sidebar-bg-color: var(--fair-gray);
     --link-accent: var(--red);
-    --placeholder-color: var(--black);
+    --placeholder-selected-color: var(--black);
+    --placeholder-color: var(--border-gray);
   }
 
   ::before,*::after {
@@ -70,5 +70,4 @@ export const GlobalStyles = createGlobalStyle`
   img {
     display: block;
   }
-
 `;

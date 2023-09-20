@@ -6,6 +6,7 @@ import { resetCards } from '../../store/store';
 
 const Sidebar = () => {
   const dispatch = useDispatch();
+
   const favorites = useSelector(state => state.cards.favorites);
 
   const handleDelete = async e => {
@@ -21,10 +22,11 @@ const Sidebar = () => {
         </Button>
       )}
       <p style={{ textIndent: '20px' }}>
-        This is a convenient application designed for those who search and
-        compare car rental offers. Our application facilitates the process of
-        choosing and booking a car by providing a wide selection of cars of
-        various brands and models.
+        To view even more detail information, there is a Learn more button on
+        the card, which opens a modal window with the selected car. You also can
+        view the selected cars on the Favorites page. To delete a card from
+        Favorites, click on the heart at the top right, or delete all cards by
+        clicking on the Delete all button on the right sidebar.
       </p>
     </StyledSidebar>
   );

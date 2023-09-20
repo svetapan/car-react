@@ -8,6 +8,7 @@ import { FavoriteContainer } from './Favorite.styled';
 
 const Favorite = () => {
   const favorites = useSelector(state => state.cards.favorites);
+
   const dispatch = useDispatch();
 
   function getCardById(id) {
@@ -28,7 +29,7 @@ const Favorite = () => {
       <FavoriteContainer>
         <Sidebar />
         {!favorites.length && (
-          <p style={{ fontSize: '32px' }}>Please choose car in Catalog</p>
+          <p style={{ fontSize: '32px' }}>Please choose car in the Catalog</p>
         )}
         <CardsGroup>
           {favorites.map(favorite => (

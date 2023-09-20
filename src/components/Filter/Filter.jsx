@@ -13,6 +13,7 @@ import { setFilter } from 'store/slices/filterSlice';
 
 const Filter = () => {
   const dispatch = useDispatch();
+
   const [filterData, setFilterData] = useState({
     brand: '',
     price: '',

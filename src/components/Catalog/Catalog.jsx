@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { BtnWrap, CardsGroup, CatalogSection } from './Catalog.styled';
-
 import { useSelector, useDispatch } from 'react-redux';
 import { setCards, toggleFavorite } from '../../store/store';
 import CardItem from '../CardItem/CardItem';
@@ -12,14 +11,17 @@ const Catalog = () => {
   const [adverts, setAdverts] = useState([]);
   const [visibleCardCount, setVisibleCardCount] = useState(8);
   const [filteredAdverts, setFilteredAdverts] = useState(adverts);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const dispatch = useDispatch();
 
   const favorites = useSelector(state => state.cards.favorites);
-  const dispatch = useDispatch();
   const filter = useSelector(state => state.filter);
 
   useEffect(() => {
     dispatch(setCards()).then(data => {
       setAdverts(data.payload);
+      setIsLoading(false);
     });
   }, [dispatch]);
 
@@ -71,8 +73,13 @@ const Catalog = () => {
     <CatalogSection>
       <Container>
         <Filter />
-        {/* {!visibleCardCount && <p>Loading</p>} */}
-        {adverts && <p>Loading</p> && (
+        {isLoading ? (
+          <p
+            style={{ fontSize: '40px', textAlign: 'center', color: '#0b44cd' }}
+          >
+            Loading cards...
+          </p>
+        ) : (
           <CardsGroup>
             {filteredAdverts.slice(0, visibleCardCount).map(advert => {
               return (
@@ -87,7 +94,7 @@ const Catalog = () => {
             })}
           </CardsGroup>
         )}
-        {!filteredAdverts.length && (
+        {!filteredAdverts.length && !isLoading && (
           <p
             style={{ fontSize: '40px', textAlign: 'center', color: '#ec3535' }}
           >

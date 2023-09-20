@@ -34,7 +34,9 @@ export const Intro = styled.div`
 `;
 
 export const IntroText = styled.p`
+  text-indent: 30px;
+  text-align: start;
   font-size: 18px;
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 1000px;
 `;

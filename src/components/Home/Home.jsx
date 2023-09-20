@@ -6,7 +6,6 @@ import { Container } from 'components/Container/Container';
 import CardItem from 'components/CardItem/CardItem';
 import { CatalogSection } from 'components/Catalog/Catalog.styled';
 import { setCards, toggleFavorite } from '../../store/store';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -16,6 +15,7 @@ const Home = () => {
   const [adverts, setAdverts] = useState([]);
 
   const dispatch = useDispatch();
+
   const favorites = useSelector(state => state.cards.favorites);
 
   useEffect(() => {
@@ -56,7 +56,20 @@ const Home = () => {
             This is a convenient application designed for those who search and
             compare car rental offers. Our application facilitates the process
             of choosing and booking a car by providing a wide selection of cars
-            of various brands and models.
+            of various brands and models.On our website, you can conveniently
+            choose a car according to the selected criteria and immediately
+            contact the operator to book a car. For ease of selection, you can
+            click on the heart at the top right and the car will automatically
+            be added to your favorites.
+          </IntroText>
+          <IntroText>
+            To view more detail information, go to the Сatalog page and choose
+            the cars you like. To view even more detail information, there is a
+            Learn more button on the card, which opens a modal window with the
+            selected car. You also can view the selected cars on the Favorites
+            page. To delete a card from Favorites, click on the heart at the top
+            right, or delete all cards by clicking on the Delete all button on
+            the right sidebar.
           </IntroText>
         </Container>
       </Intro>
