@@ -2,146 +2,73 @@
 
 ![Illustration Easy RentalCAR](./assets/easy-rental-car.png)<br/>
 
-<!-- Этот проект был создан при помощи
-[Create React App](https://github.com/facebook/create-react-app). Для знакомства
-и настройки дополнительных возможностей
-[обратись к документации](https://facebook.github.io/create-react-app/docs/getting-started). -->
-
-Easy RentalCAR - this is a convenient application designed for those who search
+<p textIndent="20px">Easy RentalCAR - this is a convenient application designed for those who search
 and compare car rental offers. Our application facilitates the process of
 choosing and booking a car by providing a wide selection of cars of various
-brands and models.
+brands and models.</p>
 
 ## Main functions and possibilities
 
-1.On the Home page you can see a slider with models of machines offered by our
+On the Home page you can see a slider with models of machines offered by our
 company. If you immediately like the car, you can click on the heart icon at the
 top right of the picture and this model will automatically be added to the
 Favorites page.
 
 ![Slider](./assets/slider.png)
 
-2.Navigating through the pages of the app: On the main screen at the top, you
-can link to the Catalog page or Favorite page, where you can browse available
-cars for rent.
+Navigating through the pages of the app: On the main screen at the top, you can
+link to the Catalog page or Favorite page, where you can browse available cars
+for rent.
 
 ![Navigation](./assets/navigation.png)
 
-3.Search and filtering: RentalCar pr ovides many parameters for searching for
+Search and filtering: RentalCar pr ovides many parameters for searching for
 cars, such as brand, rental price, car mileage from and to. You can easily
 adjust the filters to find a car that meets your needs.
 
 ![Filtering and search car](./assets/filters.png)
 
-4.Detailed information: for a more detail description of the selected сфк, you
-can click the Learn more button. A modal window will open with detail
-information about the selected model.You can also add a model to the list of
-favorites by clicking on the heart at the top or remove it from the list of
-favorites by clicking on the heart again.
+Detailed information: for a more detail description of the selected сфк, you can
+click the Learn more button. A modal window will open with detail information
+about the selected model.You can also add a model to the list of favorites by
+clicking on the heart at the top or remove it from the list of favorites by
+clicking on the heart again.
 
 ![Detail information](./assets/button-learn-more.png)
 
-Используй этот репозиторий организации GoIT как шаблон для создания репозитория
-своего проекта. Для этого нажми на кнопку `«Use this template»` и выбери опцию
-`«Create a new repository»`, как показано на изображении.
+Modal window: you can read detailed information about the car and if everything
+suits you, click the Rental car button, which will automatically connect you
+with the company by phone.
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+![Detail modal](./assets/detail-modal.png)
 
-На следующем шаге откроется страница создания нового репозитория. Заполни поле
-его имени, убедись что репозиторий публичный, после чего нажми кнопку
-`«Create repository from template»`.
+View even more adverts you can by clicking the Load more button at the bottom of
+the Home page.
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+![Detail modal](./assets/load-more.png)
 
-После того как репозиторий будет создан, необходимо перейти в настройки
-созданного репозитория на вкладку `Settings` > `Actions` > `General` как
-показано на изображении.
+On Favorite page you can view the selected car and see detail information about
+the car by clicking the Learn more button. You can remove car from the list of
+favorites by clicking on the heart at the top right. You can delete all cars
+from the list by clicking the Delete all button in the sidebar.
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
+![Favorite Page](./assets/favorite-page.png)
 
-Проскролив страницу до самого конца, в секции `«Workflow permissions»` выбери
-опцию `«Read and write permissions»` и поставь галочку в чекбоксе. Это
-необходимо для автоматизации процесса деплоя проекта.
+<div align="center">
+<b>Технології та інструменти що були використані при розробці:</b></br>
+  
+![Mockapi.io](https://img.shields.io/badge/-Mockapi.io-%23Clojure?style=for-the-badge&logo=Mockapi.io&logoColor=white)
+![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
+![Redux](https://img.shields.io/badge/@reduxjs/toolkit-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Babel](https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black)</br>
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
 
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
-
-Теперь у тебя есть личный репозиторий проекта, со структурой файлов и папок
-репозитория-шаблона. Далее работай с ним как с любым другим личным репозиторием,
-клонируй его себе на компьютер, пиши код, делай коммиты и отправляй их на
-GitHub.
-
-## Подготовка к работе
-
-1. Убедись что на компьютере установлена LTS-версия Node.js.
-   [Скачай и установи](https://nodejs.org/en/) её если необходимо.
-2. Установи базовые зависимости проекта командой `npm install`.
-3. Запусти режим разработки, выполнив команду `npm start`.
-4. Перейди в браузере по адресу [http://localhost:3000](http://localhost:3000).
-   Эта страница будет автоматически перезагружаться после сохранения изменений в
-   файлах проекта.
-
-## Деплой
-
-Продакшн версия проекта будет автоматически проходить линтинг, собираться и
-деплоиться на GitHub Pages, в ветку `gh-pages`, каждый раз когда обновляется
-ветка `main`. Например, после прямого пуша или принятого пул-реквеста. Для этого
-необходимо в файле `package.json` отредактировать поле `homepage`, заменив
-`your_username` и `your_repo_name` на свои, и отправить изменения на GitHub.
-
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
-
-Далее необходимо зайти в настройки GitHub-репозитория (`Settings` > `Pages`) и
-выставить раздачу продакшн версии файлов из папки `/root` ветки `gh-pages`, если
-это небыло сделано автоматически.
-
-![GitHub Pages settings](./assets/repo-settings.png)
-
-### Статус деплоя
-
-Статус деплоя крайнего коммита отображается иконкой возле его идентификатора.
-
-- **Желтый цвет** - выполняется сборка и деплой проекта.
-- **Зеленый цвет** - деплой завершился успешно.
-- **Красный цвет** - во время линтинга, сборки или деплоя произошла ошибка.
-
-Более детальную информацию о статусе можно посмотреть кликнув по иконке, и в
-выпадающем окне перейти по ссылке `Details`.
-
-![Deployment status](./assets/deploy-status.png)
-
-### Живая страница
-
-Через какое-то время, обычно пару минут, живую страницу можно будет посмотреть
-по адресу указанному в отредактированном свойстве `homepage`. Например, вот
-ссылка на живую версию для этого репозитория
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
-
-Если открывается пустая страница, убедись что во вкладке `Console` нет ошибок
-связанных с неправильными путями к CSS и JS файлам проекта (**404**). Скорее
-всего у тебя неправильное значение свойства `homepage` в файле `package.json`.
-
-### Маршрутизация
-
-Если приложение использует библиотеку `react-router-dom` для маршрутизации,
-необходимо дополнительно настроить компонент `<BrowserRouter>`, передав в пропе
-`basename` точное название твоего репозитория. Слеш в начале строки обязателен.
-
-```jsx
-<BrowserRouter basename="/your_repo_name">
-  <App />
-</BrowserRouter>
-```
-
-## Как это работает
-
-![How it works](./assets/how-it-works.png)
-
-1. После каждого пуша в ветку `main` GitHub-репозитория, запускается специальный
-   скрипт (GitHub Action) из файла `.github/workflows/deploy.yml`.
-2. Все файлы репозитория копируются на сервер, где проект инициализируется и
-   проходит линтинг и сборку перед деплоем.
-3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
-   отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
-   скрипта будет указано в чем проблема.
+</div>

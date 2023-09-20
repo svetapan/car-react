@@ -16,11 +16,15 @@ const Sidebar = () => {
   return (
     <StyledSidebar>
       {favorites.length > 0 && (
-        <Button onClick={handleDelete}>Delete all</Button>
+        <Button onClick={handleDelete} style={{ marginBottom: '20px' }}>
+          Delete all
+        </Button>
       )}
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-        porro ut at! At est unde ullam libero, voluptatem laboriosam dolorum.
+      <p style={{ textIndent: '20px' }}>
+        This is a convenient application designed for those who search and
+        compare car rental offers. Our application facilitates the process of
+        choosing and booking a car by providing a wide selection of cars of
+        various brands and models.
       </p>
     </StyledSidebar>
   );
