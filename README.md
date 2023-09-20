@@ -1,6 +1,6 @@
 # Easy RentalCAR
 
-![Illustration Easy RentalCAR](./easy-rental-car.png)<br/>
+![Illustration Easy RentalCAR](./assets/easy-rental-car.png)<br/>
 
 <!-- Этот проект был создан при помощи
 [Create React App](https://github.com/facebook/create-react-app). Для знакомства
@@ -13,6 +13,33 @@ choosing and booking a car by providing a wide selection of cars of various
 brands and models.
 
 ## Main functions and possibilities
+
+1.On the Home page you can see a slider with models of machines offered by our
+company. If you immediately like the car, you can click on the heart icon at the
+top right of the picture and this model will automatically be added to the
+Favorites page.
+
+![Slider](./assets/slider.png)
+
+2.Navigating through the pages of the app: On the main screen at the top, you
+can link to the Catalog page or Favorite page, where you can browse available
+cars for rent.
+
+![Navigation](./assets/navigation.png)
+
+3.Search and filtering: RentalCar pr ovides many parameters for searching for
+cars, such as brand, rental price, car mileage from and to. You can easily
+adjust the filters to find a car that meets your needs.
+
+![Filtering and search car](./assets/filters.png)
+
+4.Detailed information: for a more detail description of the selected сфк, you
+can click the Learn more button. A modal window will open with detail
+information about the selected model.You can also add a model to the list of
+favorites by clicking on the heart at the top or remove it from the list of
+favorites by clicking on the heart again.
+
+![Detail information](./assets/button-learn-more.png)
 
 Используй этот репозиторий организации GoIT как шаблон для создания репозитория
 своего проекта. Для этого нажми на кнопку `«Use this template»` и выбери опцию
