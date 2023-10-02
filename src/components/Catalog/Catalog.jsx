@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { BtnWrap, CardsGroup, CatalogSection } from './Catalog.styled';
 import { useSelector, useDispatch } from 'react-redux';
-import { setCards, toggleFavorite } from '../../store/store';
+// import { toggleFavorite } from '../../store/store';
+import { setCards } from '../../store/setCards';
+import { toggleFavorite } from '../../store/slices/cardsSlice';
 import CardItem from '../CardItem/CardItem';
 import { ButtonLink } from '../Button/Button';
 import Filter from 'components/Filter/Filter';

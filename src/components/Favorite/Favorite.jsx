@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleFavorite } from '../../store/store';
+// import { toggleFavorite } from '../../store/store';
+import { toggleFavorite } from '../../store/slices/cardsSlice';
 import CardItem from '../CardItem/CardItem';
 import { CardsGroup, FavoriteSection } from './Favorite.styled';
 import Sidebar from 'components/Sidebar/Sidebar';

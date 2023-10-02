@@ -1,65 +1,74 @@
 import {
   configureStore,
-  createAsyncThunk,
-  createSlice,
+  // createAsyncThunk,
+  // createSlice,
 } from '@reduxjs/toolkit';
-import { gethAdvertsFromMockAPI } from './gethAdvertsFromMockAPI';
 import { filterReducer } from './slices/filterSlice';
+import { cardsReducer } from './slices/cardsSlice';
 
-const initialState = {
-  cards: [],
-  favorites: JSON.parse(localStorage.getItem('favorites')) || [],
-};
+// import { gethAdvertsFromMockAPI } from './gethAdvertsFromMockAPI';
 
-export const setCards = createAsyncThunk('cards/setCards', async () => {
-  try {
-    const response = await gethAdvertsFromMockAPI();
-    return response;
-  } catch (error) {
-    throw error;
-  }
-});
+// const initialState = {
+//   cards: [],
+//   favorites: JSON.parse(localStorage.getItem('favorites')) || [],
+// };
 
-const cardSlice = createSlice({
-  name: 'cards',
-  initialState,
-  reducers: {
-    [setCards.fulfilled]: (state, action) => {
-      state.cards = action.payload;
-      console.log(state.cards);
-    },
-    toggleFavorite: (state, action) => {
-      const cardId = action.payload.id;
-      const index = state.favorites.findIndex(
-        favorite => favorite.id === cardId
-      );
+// export const setCards = createAsyncThunk('cards/setCards', async () => {
+//   try {
+//     const response = await gethAdvertsFromMockAPI();
+//     return response;
+//   } catch (error) {
+//     throw error;
+//   }
+// });
 
-      if (index === -1) {
-        state.favorites.push(action.payload);
-      } else {
-        state.favorites.splice(index, 1);
-      }
+// const cardSlice = createSlice({
+//   name: 'cards',
+//   initialState,
+//   reducers: {
+//     [setCards.fulfilled]: (state, action) => {
+//       state.cards = action.payload;
+//       console.log(state.cards);
+//     },
+//     toggleFavorite: (state, action) => {
+//       const cardId = action.payload.id;
+//       const index = state.favorites.findIndex(
+//         favorite => favorite.id === cardId
+//       );
 
-      localStorage.setItem('favorites', JSON.stringify(state.favorites));
-    },
-    resetCards: (state, action) => {
-      state.favorites = [];
-      localStorage.removeItem('favorites');
-    },
-    setSelectedBrand: (state, action) => {
-      state.selectedBrand = action.payload;
-    },
-  },
-});
+//       if (index === -1) {
+//         state.favorites.push(action.payload);
+//       } else {
+//         state.favorites.splice(index, 1);
+//       }
 
-export const { toggleFavorite, resetCards, setSelectedBrand } =
-  cardSlice.actions;
+//       localStorage.setItem('favorites', JSON.stringify(state.favorites));
+//     },
+//     resetCards: (state, action) => {
+//       state.favorites = [];
+//       localStorage.removeItem('favorites');
+//     },
+//     setSelectedBrand: (state, action) => {
+//       state.selectedBrand = action.payload;
+//     },
+//   },
+// });
 
-const reducer = cardSlice.reducer;
+// export const { toggleFavorite, resetCards, setSelectedBrand } =
+//   cardSlice.actions;
+
+// const reducer = cardSlice.reducer;
+
+// const store = configureStore({
+//   reducer: {
+//     cards: reducer,
+//     filter: filterReducer,
+//   },
+// });
 
 const store = configureStore({
   reducer: {
-    cards: reducer,
+    cards: cardsReducer,
     filter: filterReducer,
   },
 });
