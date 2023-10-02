@@ -12,6 +12,7 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 21px;
+  width: 100%;
 `;
 
 export const CardImg = styled.img`
