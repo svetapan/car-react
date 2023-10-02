@@ -10,11 +10,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <GlobalStyles />
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/car-react/">
         <App />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );
-
-// basename="/car-react/"
